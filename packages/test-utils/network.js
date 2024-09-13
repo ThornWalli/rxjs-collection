@@ -10,15 +10,7 @@ export const mockOffline = () => {
 };
 
 export const mock = () => {
-  const navigator = Object();
-  Object.defineProperty(navigator, 'onLine', {
-    configurable: true,
-    get: function () {
-      return _status;
-    }
-  });
-
-  vi.stubGlobal('navigator', navigator);
+  vi.spyOn(navigator, 'onLine', 'get').mockImplementation(() => _status);
 };
 
 const updateOnLineStatus = (eventName, status) => {

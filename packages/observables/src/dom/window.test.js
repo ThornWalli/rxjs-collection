@@ -16,7 +16,7 @@ describe('DOM: window', function () {
   });
 
   afterAll(function () {
-    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
   });
 
   // HINT: https://betterprogramming.pub/rxjs-testing-write-unit-tests-for-observables-603af959e251
