@@ -13,7 +13,9 @@
   "main": "index.js",
   "scripts": {
     "release": "npx semantic-release",
-    "test": "mocha ./src/**/*.test.js"
+    "lint:es": "eslint --fix .",
+    "test": "vitest run",
+    "test:dev": "vitest dev"
   },
   "dependencies": {
     "rxjs": "7.8.1"
@@ -21,6 +23,6 @@
   "devDependencies": {
     "chai": "^5.1.1",
     "global-jsdom": "^24.0.0",
-    "mocha": "^10.7.3"
+    "vitest": "^2.1.0"
   }
 }

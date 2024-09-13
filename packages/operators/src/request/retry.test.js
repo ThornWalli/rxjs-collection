@@ -1,3 +1,5 @@
+import { describe, it } from 'vitest';
+
 describe('request retry', function () {
   it('interrupted connection 1000ms', async function () {
     console.log('YEAH');

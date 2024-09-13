@@ -2,6 +2,7 @@ import { tap } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 import { connectionObservable } from './window.js';
 import { mockOffline, mockOnline } from '../../../test-utils/network.js';
+import { beforeEach, describe, it, expect } from 'vitest';
 
 describe('DOM: window', function () {
   let testScheduler;

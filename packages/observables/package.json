@@ -13,8 +13,9 @@
   "main": "index.js",
   "scripts": {
     "release": "npx semantic-release",
-    "test:dev": "npx npm-watch",
-    "test": "mocha ./src/**/*.test.js"
+    "lint:es": "eslint --fix .",
+    "test": "vitest run",
+    "test:dev": "vitest dev"
   },
   "watch": {
     "test": {
@@ -29,6 +30,10 @@
     }
   },
   "dependencies": {
+    "rxjs": "^7.8.1",
     "sinon": "^18.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.0"
   }
 }
